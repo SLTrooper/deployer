@@ -1,21 +1,39 @@
 <?php
-	
+	error_reporting(E_ALL);
 	//config
 
 
 	//path to css
 
 	$sCssPath = "/files/sl/layout/css";
-
+	$sCssFile = "style.min.css";
 	//path to js
 
 	$sJsPath = "/files/sl/layout/js";
+	$sJsFile = "scripts.js";
+	
+	//path to Git CSS
 
-	//path to git
+	$sGitCssPath = "https://raw.githubusercontent.com/SLTrooper/deployer/master/deploy.js";
 
-	//echo shell_exec("curl -H 'Authorization: token INSERTACCESSTOKENHERE' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/owner/repo/contents/path");
+	//path to git js file
 
-	echo "test3";
+	$sGitJSPath = "https://raw.githubusercontent.com/SLTrooper/deployer/master/deploy.js";
 
+	$sJS = "";
+	if ($stream = fopen($sGitJSPath, 'r')) {
+    // print all the page starting at the offset 10
+	    $sJS = stream_get_contents($stream, -1);
+
+	    fclose($stream);
+	}
+
+
+
+	$myfile = fopen("test.txt", "w");
+	if(fwrite($myfile, $sJS)) {
+		echo "Datei erfolgreich geschrieben";
+	}
+	
 
 ?>
