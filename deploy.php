@@ -13,8 +13,9 @@
 
 	//path to git
 
-	echo shell_exec("curl -H 'Authorization: token INSERTACCESSTOKENHERE' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/owner/repo/contents/path");
+	//echo shell_exec("curl -H 'Authorization: token INSERTACCESSTOKENHERE' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/owner/repo/contents/path");
 
+	echo "test";
 
 
 ?>
