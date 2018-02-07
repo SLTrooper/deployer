@@ -20,7 +20,22 @@
 
 	$sGitJSPath = "https://raw.githubusercontent.com/SLTrooper/deployer/master/deploy.js";
 
+	$sCss = "";
 	$sJS = "";
+	
+
+
+
+	//handle css
+
+	$sCSStemp = file_get_contents("test.txt");
+	$sJStemp = file_get_contents("test.txt");
+
+
+
+
+
+
 	if ($stream = fopen($sGitJSPath, 'r')) {
     // print all the page starting at the offset 10
 	    $sJS = stream_get_contents($stream, -1);
